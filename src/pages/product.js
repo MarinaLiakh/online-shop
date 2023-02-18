@@ -3,8 +3,7 @@ import { useParams } from "react-router-dom";
 import { AddToCartButton } from "../components/addToCartButton";
 
 export const Product = () => {
-  const {productId} = useParams();
-  // console.log(smth);
+  const { productId } = useParams();
 
   return (
     <div>

@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./index.module.css";
-import { SearchProductInput } from "../searchProductInput";
 import { ShopFilter } from "../shopFilter";
+import { SearchProductInput } from "../searchProductInput";
+import styles from "./index.module.css";
 
 export const ShopMainFilter = () => {
   return (

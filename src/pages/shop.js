@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { ShopProductsList } from "../components/shopProductsList";
-import { ShopFilter } from "../components/shopFilter";
-import { SearchProductInput } from "../components/searchProductInput";
+import { ShopMainFilter } from "../components/shopMainFilter";
 import { fetchProducts } from "../utils/fetchProducts";
 import { Preloader } from "../components/preloader";
-import { ShopMainFilter } from "../components/shopMainFilter";
 
 export const Shop = () => {
   const [products, setProducts] = useState(null);
@@ -17,7 +15,7 @@ export const Shop = () => {
 
   return (
     <>
-      <ShopMainFilter/>
+      <ShopMainFilter />
       {products ? <ShopProductsList products={products} /> : <Preloader />}
     </>
   );
