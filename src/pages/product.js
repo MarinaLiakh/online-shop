@@ -1,12 +1,16 @@
-import React from 'react';
-import styles from './index.module.css';
+import React from "react";
+import { useParams } from "react-router-dom";
+import { AddToCartButton } from "../components/addToCartButton";
 
-export const Product = ({useName, category, description, img, price}) => (
-    <div className={styles.wrapper}>
-        <h3 className={styles.useName}>{useName}</h3>
-        <p className={styles.category}>{category}</p>
-        <p className={styles.description}>{description}</p>
-        <img src={img} alt='' className={styles.img}/>
-        <div className={styles.price}>{price}</div>
+export const Product = () => {
+  const { productId } = useParams();
+
+  return (
+    <div>
+      <h2>Tovar {productId}</h2>
+      <div>Price</div>
+      <div>Description</div>
+      <AddToCartButton size="m" />
     </div>
-    );
+  );
+};
